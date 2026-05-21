@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dunder Mifflin Onboarding Swarm — Architecture</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    header .logo {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: #ffffff;
+    }
+
+    header .logo span {
+      color: #f4a261;
+    }
+
+    header .subtitle {
+      margin-top: 6px;
+      font-size: 0.95rem;
+      color: #9090b0;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .card {
+      background: #16213e;
+      border: 1px solid #2a2a5a;
+      border-radius: 16px;
+      padding: 36px 40px;
+      width: 100%;
+      max-width: 1100px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f4a261;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+
+    .mermaid {
+      display: flex;
+      justify-content: center;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 32px;
+      justify-content: center;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #b0b0c8;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: #555570;
+      text-align: center;
+    }
+
+    footer a { color: #f4a261; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Dunder <span>Mifflin</span></div>
+  <div class="subtitle">Hire-to-Onboard Specialist Swarm — Architecture</div>
+</header>
+
+<div class="card">
+  <h2>Agent Flow</h2>
+  <div class="mermaid">
+flowchart TD
+    trigger(["📄 new-hire-profile.md\nAlex Rivera · Sales Rep · June 2nd"])
+    runner["⚙️ run_onboarding.py\nEvent stream"]
+    coord["🎯 Onboarding Lead\nCoordinator · claude-opus-4-7"]
+
+    subgraph parallel["⚡ Parallel Specialist Threads"]
+        direction TB
+        rec["👔 Recruiter\nclaude-sonnet-4-6"]
+        it["💻 IT Provisioning\nclaude-sonnet-4-6"]
+        buddy["🤝 Buddy Matcher\nclaude-sonnet-4-6"]
+        welcome["✉️ Welcome Packet\nclaude-haiku-4-5"]
+    end
+
+    subgraph skills["📚 Custom Skills"]
+        direction TB
+        sk1["recruiter-checklist"]
+        sk2["it-provisioning"]
+        sk3["buddy-matching\n10 Office characters"]
+        sk4["welcome-packet\nMichael / Dwight voice"]
+    end
+
+    output(["📦 Day-1 Readiness Pack\nday1-readiness-pack.docx"])
+
+    trigger --> runner
+    runner -->|user.message| coord
+    coord -->|"delegate ×4\nin parallel"| parallel
+
+    rec -.->|skill| sk1
+    it -.->|skill| sk2
+    buddy -.->|skill| sk3
+    welcome -.->|skill| sk4
+
+    parallel -->|"replies ←\nasync"| coord
+    coord -->|"synthesise +\npython-docx"| output
+
+    style trigger fill:#2d4a22,stroke:#6bcb47,color:#d4f5b0
+    style output fill:#4a2d00,stroke:#f4a261,color:#ffe0b0
+    style coord fill:#1e2d5a,stroke:#6688ff,color:#c0d0ff
+    style parallel fill:#1a1a3a,stroke:#444488
+    style skills fill:#1a1a3a,stroke:#444488
+    style runner fill:#2a2a4a,stroke:#8888cc,color:#c0c0e0
+    style rec fill:#1e3a3a,stroke:#4ab0b0,color:#b0e8e8
+    style it fill:#1e3a3a,stroke:#4ab0b0,color:#b0e8e8
+    style buddy fill:#1e3a3a,stroke:#4ab0b0,color:#b0e8e8
+    style welcome fill:#1e3a3a,stroke:#4ab0b0,color:#b0e8e8
+    style sk1 fill:#2a1a3a,stroke:#a04ab0,color:#e0b0e8
+    style sk2 fill:#2a1a3a,stroke:#a04ab0,color:#e0b0e8
+    style sk3 fill:#2a1a3a,stroke:#a04ab0,color:#e0b0e8
+    style sk4 fill:#2a1a3a,stroke:#a04ab0,color:#e0b0e8
+  </div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#6bcb47"></div> Trigger / Output
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#6688ff"></div> Coordinator (Opus)
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#4ab0b0"></div> Specialists (Sonnet / Haiku)
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#a04ab0"></div> Custom Skills
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#8888cc"></div> Runner / Event Stream
+    </div>
+  </div>
+</div>
+
+<footer>
+  Powered by <a href="https://anthropic.com">Anthropic Managed Agents</a> &nbsp;·&nbsp;
+  Dunder Mifflin Scranton Branch &nbsp;·&nbsp;
+  "I am Beyoncé, always." — M. Scott
+</footer>
+
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "dark",
+    flowchart: { curve: "basis", padding: 20 },
+    themeVariables: {
+      primaryColor: "#1e2d5a",
+      primaryTextColor: "#c0d0ff",
+      primaryBorderColor: "#6688ff",
+      lineColor: "#6688ff",
+      secondaryColor: "#1e3a3a",
+      tertiaryColor: "#2a1a3a",
+      background: "#16213e",
+      mainBkg: "#16213e",
+      nodeBorder: "#6688ff",
+      clusterBkg: "#1a1a3a",
+      titleColor: "#ffffff",
+      edgeLabelBackground: "#1a1a2e",
+      fontFamily: "Segoe UI, Arial, sans-serif"
+    }
+  });
+</script>
+</body>
+</html>
