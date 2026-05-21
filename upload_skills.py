@@ -20,9 +20,10 @@ from anthropic.lib import files_from_dir
 
 # Map skill directory name → specialist key that should get it
 SKILL_TO_SPECIALIST = {
-    "pricing-playbook": "pricing",
-    "legal-checklist":  "legal",
-    "competitive-intel": "competitive",
+    "recruiter-checklist": "recruiter",
+    "it-provisioning":     "it_provisioning",
+    "buddy-matching":      "buddy_match",
+    "welcome-packet":      "welcome_packet",
 }
 
 
