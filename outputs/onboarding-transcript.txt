@@ -1,0 +1,17 @@
+Profile is clear: Alex Rivera, Sales Rep starting June 2nd under Michael Scott. I have python-docx for the branded Word document. Delegating to all four specialists in parallel now.All four specialists are working. Ending turn to wait for their reports.Buddy Matcher delivered. Waiting on the other three.Recruiter delivered. Two more pending.All four specialists have delivered. Building the branded Day-1 Readiness Pack as a Word document now.The Day-1 Readiness Pack is ready.
+
+**Deliverable:** `/mnt/session/outputs/Alex_Rivera_Day1_Readiness_Pack.docx` (a branded Dunder Mifflin Word document)
+
+**What's inside (6 sections):**
+
+1. **New Hire Summary** — Alex Rivera, Sales Rep, starting Tuesday June 2, 2026, reporting to Michael Scott.
+2. **Offer Terms Confirmed** — Compensation, PTO, benefits, restrictive covenants, and the Annex D / Ryan Howard Clause all verified by Recruiting.
+3. **Pre-Employment Documents & Blockers** — Document checklist plus 5 prioritised blockers, the most urgent being the **vision enrollment form Kevin lost** (needs reissue before June 2) and the **HireRight background check** (must clear before badge issuance).
+4. **IT Provisioning Checklist** — Hardware, accounts (`arivera` / alex.rivera@dundermifflin.com), software, and a 7-step Day-1 login path. Pre-flight notes include holding the supplier pricing sheet until Week 3 (Michael leaks it on Day 1) and a reminder to Dwight that personal USB installs are still banned.
+5. **Onboarding Buddy** — **Jim Halpert** as primary (shared improv interest, ideal seniority gap, Michael-translator), **Phyllis Vance** as backup. Includes Jim's week-1 brief and a Day-1 plan (Jim-led walkthrough, break-room lunch with Phyllis and Oscar, paper-product trivia in the afternoon).
+6. **Welcome Letter & Day-1 Survival Guide** — Personalised letter signed by Michael Scott, 7 tailored survival tips (Pretzel Day, sticky annex door, bowling league opening, Café Disco, sudoku-brained expense reports, Thursday 9 AM sales meeting, origami/birdwatching as cultural assets), and a Scranton Starter Pack of who's who.
+
+**Top three things to action before June 2:**
+- Reissue the vision enrollment form (Kevin lost the original).
+- Confirm HireRight background check has cleared so Reception can activate the badge at 8:45 AM.
+- Call Michael Scott (don't email) to confirm the start date.
