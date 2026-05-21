@@ -1,0 +1,17 @@
+Ok here are our notes on that. Generate the description of the employee including it’s interest and position, hobbies and role
+
+  Generate an offer between the artificial employee and Dunder Mufflin company
+      It should contain agreed salary
+      It should contain number of PTO
+      It should contain benefits. One of the benefit must be a pretzel day once a year.
+      It should contain the terms of collaboration
+
+
+  Generate a job description and tools that are needed for the job
+
+
+  Generate 10 potenial buddies spanned across 3 different departments sales, hr, accounting. This should have their personal interest and hobbies
+
+  Generate welcome content using Michel Scott or Dwight Shrute style and quotes.
+   The first three items are for synthetic data (new-hire-profile.md) and one is for buddy matching (please choose the office characters as buddies) and the last one is for welcoming content. If you are not at
+  least 80% sure about what to do please ask questions. When you will be doing this stuff remember that we want to have The Office theme. Feel free to complete all five tasks
